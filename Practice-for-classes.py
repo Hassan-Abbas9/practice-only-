@@ -23,5 +23,43 @@ class Person:
 
 person_instance = Person("hassan", 27, "male")
 
-Person.set(person_instance)
-Person.get(person_instance)
+
+# Person.set(person_instance)
+# Person.get(person_instance)
+
+
+# Exercise 2: Bank Account Class
+#
+# Create a class representing a bank account. Include attributes like account_number,
+# account_holder, and balance. Write methods to deposit and withdraw money,
+# and a method to display the account details.
+
+class BankAccount:
+    def __init__(self, account_number, account_holder, balance):
+        self.account_number = account_number
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        self.balance -= amount
+
+    def display_account_details(self):
+        print(f'your account number is {self.account_number}')
+        print(f'Your are {self.account_holder}')
+        print(f'Your balance is {self.balance}')
+
+
+# Create instances of the BankAccount class
+person1 = BankAccount(10500100, "Hassan", 50000)
+person2 = BankAccount(10550101, "A", 20000)
+
+# Call methods on instances
+person1.deposit(1000)
+person2.withdraw(5000)
+
+# Display account details
+person1.display_account_details()
+person2.display_account_details()
