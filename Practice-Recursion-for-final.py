@@ -11,7 +11,7 @@ def factorial(num):
         return num * factorial(num - 1)
 
 
-# print(factorial(5))
+print(factorial(5))
 
 
 # Problem 2: Sum of Digits
@@ -29,7 +29,7 @@ def sum_of_digits(digits):
             # last digit here so it's 3 + (remainder digits // 10 which is
             # 12 then we get 3 + 2 + 1.
 
-# print(sum_of_digits(123))
+print(sum_of_digits(123))
 
 # Problem 3: Fibonacci Sequence
 #
@@ -48,7 +48,7 @@ def fibonacci_sequence(num):
         # F(5)=3+2=5F(5)=3+2=5
 
 
-# print(fibonacci_sequence(5))
+print(fibonacci_sequence(5))
 
 
 # Problem 4: Power
@@ -62,4 +62,31 @@ def power(base, exponent):
         return base * power(base, exponent - 1)
 
 print(power(5,5))
+
+
+# Problem 5: Palindrome
+#
+# Write a recursive function to check if a given string is a palindrome.
+# A palindrome is a word, phrase, number, or other sequence of characters
+# that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+#
+
+def palindrome_check(string):
+
+    if len(string):
+        return True
+    else:
+        if string [0] == string[-1]:
+            return palindrome_check(string[1:-1])
+        else:
+            return False
+
+
+result = palindrome_check('Hello')
+if result:
+    print('string is palindrome')
+else:
+    print('string is not a palindrome')
+
+
 
