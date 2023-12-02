@@ -63,3 +63,32 @@ person2.withdraw(5000)
 # Display account details
 person1.display_account_details()
 person2.display_account_details()
+
+
+# Exercise 3: Car Class
+#
+# Create a class representing a car. Include attributes like make, model, year, and mileage.
+# Write methods to update the mileage and display information about the car.
+
+class Car:
+    def __init__(self, model, year, mileage):
+        self.model = model
+        self.year = year
+        self.mileage = mileage
+
+    def update_mileage(self, update):
+        self.mileage += update
+
+    def display_info(self):
+        print(self.model, end=' ')
+        print(self.year, end=' ')
+        print(self.mileage, end=' ')
+
+
+car1 = Car("lambo", 2020, 10000)
+car2 = Car("Honda", 2020, 50000)
+
+car1.update_mileage(5000)
+
+print(car1.display_info())
+print(car2.display_info())
