@@ -74,7 +74,7 @@ print(power(5,5))
 def palindrome_check(string):
 
     if len(string):
-        return True
+        return 0
     else:
         if string [0] == string[-1]:
             return palindrome_check(string[1:-1])
@@ -89,4 +89,19 @@ else:
     print('string is not a palindrome')
 
 
+# Problem 6: Reverse a String
+#
+# Write a recursive function to reverse a given string.
+# For example, if the input is "hello," the output should be "olleh."
+
+def reverse_string(s):
+
+        if not s:
+            return s
+        else:
+            return s[-1] + reverse_string(s[:-1])
+
+
+s = input("Enter the string you want to reverse: ")
+print(f'the reversed string is {reverse_string(s)}')
 
