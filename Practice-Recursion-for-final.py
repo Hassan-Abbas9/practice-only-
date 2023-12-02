@@ -48,5 +48,18 @@ def fibonacci_sequence(num):
         # F(5)=3+2=5F(5)=3+2=5
 
 
-print(fibonacci_sequence(5))
+# print(fibonacci_sequence(5))
+
+
+# Problem 4: Power
+#
+# Write a recursive function to calculate the result of raising a number base to the power of an integer exponent.
+
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    else:
+        return base * power(base, exponent - 1)
+
+print(power(5,5))
 
