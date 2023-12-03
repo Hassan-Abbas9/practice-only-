@@ -16,7 +16,7 @@ class LinkedList:
             print(current.value, end="--->")
             current = current.next
 
-    def add_node(self, value):
+    def append(self, value):
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -30,9 +30,9 @@ class LinkedList:
 
 
 LL_instance = LinkedList()
-LL_instance.add_node(30)
-LL_instance.add_node(20)
-LL_instance.add_node(10)
+LL_instance.append(30)
+LL_instance.append(20)
+LL_instance.append(10)
 LL_instance.display_nodes()
 
 
