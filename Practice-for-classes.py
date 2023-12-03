@@ -90,5 +90,32 @@ car2 = Car("Honda", 2020, 50000)
 
 car1.update_mileage(5000)
 
-print(car1.display_info())
-print(car2.display_info())
+car1.display_info()
+car2.display_info()
+
+
+class Library:
+    def __init__(self, title, author, isbn):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+
+    def add_book(self, title, author, isbn):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+
+    def display_info(self):
+        print(self.title, end=' ')
+        print(self.author, end=' ')
+        print(self.isbn, end=' ')
+
+
+# Create instances of the Library class
+book1 = Library("The Subtle Art of Not Giving a F*ck", "Mark Manson", 10001520)
+book2 = Library("The Atomic Habit", "Hassan", 4512005)
+
+# Add books and display information
+book1.add_book("Sapiens", "Yuval Noah Harari", 9780062316097)
+book2.add_book("Educated", "Tara Westover", 9780399590504)
+
