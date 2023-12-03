@@ -63,7 +63,7 @@ class LinkedList:
             return None
         temp = self.head
         pre = self.head
-        while(temp.next):
+        while (temp.next):
             pre = temp
             temp = temp.next
         self.tail = pre
@@ -72,6 +72,15 @@ class LinkedList:
         if self.length == 0:
             self.head = None
             self.tail = None
+
+    def search_value(self, search):
+        current = self.head
+        while current:
+            if current.value == search:
+                return True
+            else:
+                current = current.next
+        return False
 
 
 LL_instance = LinkedList()
@@ -84,5 +93,6 @@ LL_instance.add_node_at_beginning(60)
 LL_instance.delete_node_at_beginning()
 LL_instance.delete_node_at_beginning()
 LL_instance.pop()
+result = LL_instance.search_value(20)
+print(result)
 LL_instance.display_nodes()
-
