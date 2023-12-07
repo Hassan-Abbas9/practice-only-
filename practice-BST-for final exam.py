@@ -127,7 +127,6 @@ def main():
     print(bst.root.left.right.data)
 
 
-
 if __name__ == '__main__':
     main()
 
